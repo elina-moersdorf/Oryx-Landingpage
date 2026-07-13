@@ -3,11 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Consent Mode v2 — Standardwerte (verweigert), bis Einwilligung vorliegt -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <!-- Platzhalter: Google Tag Manager-Snippet hier einfügen, sobald verfügbar -->
   <title>Beratungsgespräch vereinbaren – ORYX Technologies</title>
   <meta name="description" content="Sprechen Sie mit den ORYX-Experten. Schildern Sie Ihre Anforderungen – wir melden uns innerhalb von 24 Stunden mit einer individuellen Lösung.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="img/cropped-Fav-Icon-192x192.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -271,10 +281,12 @@
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
       <a href="agb.html">AGB</a>
+      <a href="#" data-cc-open>Cookie-Einstellungen</a>
     </div>
   </div>
 </footer>
 
 <script src="main.js"></script>
+<script src="cookie-consent.js"></script>
 </body>
 </html>
