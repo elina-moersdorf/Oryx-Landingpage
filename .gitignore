@@ -1,0 +1,9 @@
+# Unkomprimierte Original-Bilder (Backup, nicht für die Live-Seite benötigt)
+img-originale/
+
+# Interne Arbeitsunterlagen, kein Bestandteil der Website
+Meeting-Briefing.md
+260304_ORYX-Praesentation (1).pdf
+
+# Lokale Editor-/Tooling-Konfiguration
+.claude/
