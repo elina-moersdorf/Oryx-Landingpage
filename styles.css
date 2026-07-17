@@ -301,14 +301,16 @@ p  { line-height: 1.75; color: var(--muted); }
    PRODUCT CARDS
    ============================================================ */
 .products-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
   max-width: var(--max); margin: 0 auto;
 }
 .pcard {
+  flex: 1 1 calc(33.333% - 14px); max-width: calc(33.333% - 14px);
   background: var(--white); border: 1px solid var(--border-l);
   border-radius: 8px; overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   transform-style: preserve-3d; cursor: pointer;
+  scroll-margin-top: 100px; /* Platz für fixe Nav bei Sprung per Anker-Link */
 }
 .pcard:hover {
   border-color: rgba(218,18,18,0.3);
@@ -343,10 +345,11 @@ p  { line-height: 1.75; color: var(--muted); }
    INDUSTRIES (with photos)
    ============================================================ */
 .ind-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
   max-width: var(--max); margin: 0 auto;
 }
 .ind-item {
+  flex: 1 1 calc(33.333% - 14px); max-width: calc(33.333% - 14px);
   background: var(--white); border: 1px solid var(--border-l);
   border-radius: 8px; overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
@@ -552,8 +555,7 @@ p  { line-height: 1.75; color: var(--muted); }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .products-grid { grid-template-columns: 1fr 1fr; }
-  .ind-grid      { grid-template-columns: repeat(2, 1fr); }
+  .pcard, .ind-item { flex-basis: calc(50% - 10px); max-width: calc(50% - 10px); }
   .specs-grid    { grid-template-columns: repeat(2, 1fr); }
   .values-inner  { grid-template-columns: repeat(2, 1fr); gap: 24px 32px; }
   .footer-top    { grid-template-columns: 1fr 1fr; gap: 40px; }
@@ -564,14 +566,12 @@ p  { line-height: 1.75; color: var(--muted); }
   .nav-links, .nav-cta { display: none; }
   .nav-burger { display: flex; }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 32px 0 56px; }
-  .hero-media { order: -1; }
   .page-hero-inner { grid-template-columns: 1fr; gap: 36px; }
   .page-hero-media { order: -1; }
   .process-inner { grid-template-columns: 1fr; gap: 28px; }
   .process-divider { display: none; }
   .process-step { padding: 0; }
-  .products-grid { grid-template-columns: 1fr; }
-  .ind-grid      { grid-template-columns: 1fr; }
+  .pcard, .ind-item { flex-basis: 100%; max-width: 100%; }
   .specs-grid    { grid-template-columns: 1fr; }
   .app-grid      { grid-template-columns: 1fr; }
   .values-inner  { grid-template-columns: 1fr; gap: 28px; }

@@ -93,11 +93,34 @@ if (form) {
 
 /* ---- Smooth anchor offset (fixed nav) ---- */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
+  const href = a.getAttribute('href');
+  if (href.length <= 1) return; // "#" allein (z.B. Cookie-Einstellungen-Link) ist kein Sprungziel
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
     const offset = 80;
     window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
   });
 });
+
+/* ---- Sprungziel beim Laden anspringen (z. B. Link von anderer Seite mit #anker) ----
+   Nativer Anker-Sprung beim Seitenaufruf kann mit scroll-behavior:smooth kollidieren
+   und dadurch inkonsistent ausfallen — deshalb explizit mit Nav-Offset nachgezogen. */
+if (window.location.hash.length > 1) {
+  window.addEventListener('load', () => {
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+    const offset = 80;
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+  });
+}
+
+/* ---- Produktinteresse aus URL-Parameter vorauswählen (z. B. ?produkt=kabelkennzeichnung) ---- */
+const produktSelect = document.getElementById('produkt');
+if (produktSelect) {
+  const produktParam = new URLSearchParams(window.location.search).get('produkt');
+  if (produktParam && produktSelect.querySelector(`option[value="${produktParam}"]`)) {
+    produktSelect.value = produktParam;
+  }
+}
