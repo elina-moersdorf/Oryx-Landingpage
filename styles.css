@@ -52,6 +52,7 @@ p  { line-height: 1.75; color: var(--muted); }
   text-transform: uppercase; color: var(--red); margin-bottom: 20px;
 }
 .eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--red); flex-shrink: 0; }
+.eyebrow-logo { height: 14px; width: auto; flex-shrink: 0; }
 
 /* ---- Buttons ---- */
 .btn {
