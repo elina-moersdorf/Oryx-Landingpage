@@ -43,6 +43,17 @@
         ad_personalization: consent.marketing ? 'granted' : 'denied'
       });
     }
+
+    // Benutzerdefiniertes Ereignis fuer GTM, sobald alle optionalen Kategorien
+    // (Statistik + Marketing) aktiv sind — im Tag-Assistenten als "consent_all_granted" sichtbar.
+    if (consent.statistics && consent.marketing) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'consent_all_granted',
+        consent_statistics: consent.statistics,
+        consent_marketing: consent.marketing
+      });
+    }
   }
 
   // Öffentliche, kleine API für künftige Skripte (z. B. nach GTM-Einbau)
