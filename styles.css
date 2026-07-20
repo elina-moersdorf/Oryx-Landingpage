@@ -595,6 +595,7 @@ p  { line-height: 1.75; color: var(--muted); }
   .page-hero     { padding: 108px 24px 64px; }
   .eyebrow       { white-space: normal; }
   .cta-banner .btn { white-space: normal; max-width: 100%; text-align: center; }
+  .logo-track    { animation-duration: 35s; }
 }
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: stretch; }
