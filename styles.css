@@ -222,6 +222,9 @@ p  { line-height: 1.75; color: var(--muted); }
 .logo-track {
   display: flex; align-items: center; gap: 56px; width: max-content;
   animation: marquee 70s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  -webkit-transform: translateZ(0); transform: translateZ(0);
 }
 @media (hover: hover) {
   .logo-marquee:hover .logo-track { animation-play-state: paused; }
