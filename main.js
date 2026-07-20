@@ -79,15 +79,7 @@ if (form) {
     btn.textContent  = 'Wird gesendet …';
     btn.disabled     = true;
     btn.style.opacity = '0.7';
-    // Formspree handles the POST; this just gives UX feedback.
-    // If the action is still the placeholder, prevent submit and warn.
-    if (this.action.includes('XXXXXXXX')) {
-      e.preventDefault();
-      alert('Formspree-ID noch nicht eingetragen. Bitte action-Attribut im Kontaktformular ersetzen.');
-      btn.textContent = orig;
-      btn.disabled    = false;
-      btn.style.opacity = '';
-    }
+    // Web3Forms handles the POST + redirect; this just gives UX feedback.
   });
 }
 
