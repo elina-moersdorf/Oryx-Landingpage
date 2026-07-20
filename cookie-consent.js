@@ -64,7 +64,7 @@
     banner.innerHTML =
       '<div class="cc-inner">' +
         '<div class="cc-row">' +
-          '<p class="cc-text">Wir nutzen Cookies, um unsere Website technisch bereitzustellen. Mit Ihrer Einwilligung setzen wir außerdem Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a> und im <a href="impressum.html">Impressum</a>.</p>' +
+          '<p class="cc-text">Wir nutzen Cookies, um unsere Website technisch bereitzustellen. Mit Ihrer Einwilligung setzen wir außerdem Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="datenschutz">Datenschutzerklärung</a> und im <a href="impressum">Impressum</a>.</p>' +
           '<div class="cc-actions">' +
             '<button type="button" class="cc-btn-settings" data-cc="settings">Einstellungen</button>' +
             '<button type="button" class="cc-btn cc-btn-reject" data-cc="reject">Nur notwendige</button>' +
