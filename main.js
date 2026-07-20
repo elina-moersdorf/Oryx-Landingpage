@@ -80,6 +80,12 @@ if (form) {
     btn.disabled     = true;
     btn.style.opacity = '0.7';
     // Web3Forms handles the POST + redirect; this just gives UX feedback.
+    // E-Mail fuer erweiterte Conversions zwischenspeichern, wird auf danke.html
+    // wieder ausgelesen und in den dataLayer gepusht (Google Ads Enhanced Conversions).
+    const emailField = this.querySelector('#email');
+    if (emailField && emailField.value) {
+      try { sessionStorage.setItem('oryx_lead_email', emailField.value.trim()); } catch (err) {}
+    }
   });
 }
 

@@ -22,10 +22,23 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K99ZC7DT');</script>
   <!-- End Google Tag Manager -->
+  <!-- Erweiterte Conversions: E-Mail aus Kontaktformular fuer Google Ads bereitstellen -->
+  <script>
+    (function () {
+      try {
+        var leadEmail = sessionStorage.getItem('oryx_lead_email');
+        if (leadEmail) {
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({ event: 'conversion_email_ready', user_email: leadEmail });
+          sessionStorage.removeItem('oryx_lead_email');
+        }
+      } catch (err) {}
+    })();
+  </script>
   <title>Vielen Dank – ORYX Technologies</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.etikettenloesungen.com/danke">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
