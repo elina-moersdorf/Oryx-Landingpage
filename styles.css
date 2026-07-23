@@ -217,7 +217,7 @@ p  { line-height: 1.75; color: var(--muted); }
 .about-medaillon-wrap { display: flex; justify-content: flex-start; }
 .about-medaillon {
   position: relative; flex: 0 0 auto; box-sizing: border-box;
-  width: 240px; height: 130px; padding: 24px;
+  width: 180px; height: 180px; padding: 30px;
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--border-l); background: var(--white);
 }
