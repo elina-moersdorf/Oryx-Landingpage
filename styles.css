@@ -215,8 +215,13 @@ p  { line-height: 1.75; color: var(--muted); }
 .about-section { background: var(--white); padding: 96px 28px; border-bottom: none; }
 .about-section .page-hero-inner { grid-template-columns: 1.6fr 0.4fr; gap: 40px; }
 .about-medaillon-wrap { display: flex; justify-content: flex-start; }
-.about-medaillon { position: relative; flex: 0 0 auto; }
-.about-medaillon img { width: 220px; height: 220px; object-fit: cover; border: 1px solid var(--border-l); }
+.about-medaillon {
+  position: relative; flex: 0 0 auto; box-sizing: border-box;
+  width: 240px; height: 130px; padding: 24px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border-l); background: var(--white);
+}
+.about-medaillon img { width: 100%; height: 100%; object-fit: contain; }
 .about-medaillon::before, .about-medaillon::after { content: ''; position: absolute; width: 24px; height: 24px; border-color: var(--red); border-style: solid; z-index: 1; }
 .about-medaillon::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
 .about-medaillon::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
