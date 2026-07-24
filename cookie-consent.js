@@ -66,6 +66,12 @@
         sessionStorage.removeItem('oryx_lead_email');
       }
     } catch (e) {}
+
+    // Generisches Seitenaufruf-Ereignis, garantiert erst NACH Consent-Aufloesung
+    // gepusht (unabhaengig von granted/denied). page_path in GTM z. B. per
+    // "enthaelt /kontakt" filtern, um einzelne Seiten als Ziel zu tracken.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'page_view_ready', page_path: window.location.pathname });
   }
 
   // Öffentliche, kleine API für künftige Skripte (z. B. nach GTM-Einbau)
