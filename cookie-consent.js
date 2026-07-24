@@ -54,6 +54,18 @@
         consent_marketing: consent.marketing
       });
     }
+
+    // Formular-E-Mail (falls vorhanden, siehe main.js) erst NACH Aufloesung
+    // des Consent-Status an GTM uebergeben — unabhaengig davon, ob granted
+    // oder denied, damit die Reihenfolge im dataLayer immer stimmt.
+    try {
+      var leadEmail = sessionStorage.getItem('oryx_lead_email');
+      if (leadEmail) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'conversion_email_ready', user_email: leadEmail });
+        sessionStorage.removeItem('oryx_lead_email');
+      }
+    } catch (e) {}
   }
 
   // Öffentliche, kleine API für künftige Skripte (z. B. nach GTM-Einbau)
