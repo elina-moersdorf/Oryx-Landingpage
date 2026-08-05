@@ -83,7 +83,7 @@ p  { line-height: 1.75; color: var(--muted); }
 .nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
 .nav-inner {
   max-width: var(--max); margin: 0 auto; height: 72px;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: flex-start; gap: 48px;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; }
 .nav-logo img { height: 34px; width: auto; }
@@ -136,7 +136,7 @@ p  { line-height: 1.75; color: var(--muted); }
   border-left-color: var(--red); padding-left: 24px;
 }
 
-.nav-cta { margin-left: 20px; padding: 10px 20px; font-size: 0.82rem; }
+.nav-cta { margin-left: auto; padding: 10px 20px; font-size: 0.82rem; }
 
 .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
 .nav-burger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.25s ease; }
