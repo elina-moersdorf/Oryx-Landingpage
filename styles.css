@@ -301,6 +301,8 @@ p  { line-height: 1.75; color: var(--muted); }
   border-top: 1px solid var(--border-l);
   border-bottom: 1px solid var(--border-l);
 }
+/* Staerkerer Kontrast, wenn die Sektion davor selbst fast weiss ist (z. B. Startseite) */
+.process-strip--contrast { border-top-color: #c4c4c4; }
 .process-inner {
   max-width: var(--max); margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 0; align-items: center;
