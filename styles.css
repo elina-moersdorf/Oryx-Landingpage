@@ -298,6 +298,7 @@ p  { line-height: 1.75; color: var(--muted); }
    ============================================================ */
 .process-strip {
   background: var(--white); padding: 52px 28px;
+  border-top: 1px solid var(--border-l);
   border-bottom: 1px solid var(--border-l);
 }
 .process-inner {
