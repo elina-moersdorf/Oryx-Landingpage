@@ -238,7 +238,7 @@ p  { line-height: 1.75; color: var(--muted); }
 /* ============================================================
    KUNDEN-LOGOS — continuous marquee
    ============================================================ */
-.logo-marquee { background: var(--alt); border-bottom: 1px solid var(--border-l); padding: 34px 0; overflow: hidden; }
+.logo-marquee { background: var(--alt); border-top: 1px solid var(--border-l); border-bottom: 1px solid var(--border-l); padding: 34px 0; overflow: hidden; }
 .logo-marquee-label {
   text-align: center; font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.16em; text-transform: uppercase;
