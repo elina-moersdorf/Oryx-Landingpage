@@ -40,20 +40,6 @@ document.querySelectorAll('.mobile-toggle').forEach(btn => {
   });
 });
 
-/* ---- Scroll fade-in ---- */
-const fadeEls = document.querySelectorAll('.fade-up');
-if (fadeEls.length) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-  fadeEls.forEach(el => io.observe(el));
-}
-
 /* ---- 3D card tilt ---- */
 document.querySelectorAll('.pcard[data-tilt]').forEach(card => {
   const STRENGTH = 4;
