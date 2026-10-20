@@ -297,6 +297,9 @@ p  { line-height: 1.75; color: var(--muted); }
 
 .trust-item { font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .trust-item::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+.about-section .hero-desc { color: var(--dark); font-size: 1.2rem; max-width: 600px; }
+.about-section .trust-item { color: var(--dark); font-size: 1rem; line-height: 1.45; align-items: flex-start; }
+.about-section .trust-item::before { margin-top: 0.55em; }
 
 /* ============================================================
    PROCESS STRIP (white, red accent only on numbers)
