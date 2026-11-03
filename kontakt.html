@@ -38,7 +38,7 @@
   <meta name="twitter:image" content="https://www.etikettenloesungen.com/img/produkte/etikett-leiterplatte.jpg">
   <link rel="icon" href="img/cropped-Fav-Icon-192x192.png">
   <link rel="preload" href="fonts/HankenGrotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=46">
+  <link rel="stylesheet" href="styles.css?v=47">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -85,48 +85,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="kontakt" class="btn btn-primary action">Beratungsgespräch vereinbaren</a>
 </div>
 
-<section class="section" id="kontaktformular" style="padding-top: calc(var(--nav-height) + var(--space-8));"><div class="container">
-  <div class="contact-wrap">
-    <div class="s-head"><span class="eyebrow"><img src="img/cropped-Fav-Icon-192x192.png" alt="" class="eyebrow-logo">Kontaktformular von ORYX Technologies</span><h1 class="heading">Ihre Anfrage an uns.</h1><p class="lead">Alle mit * markierten Felder sind Pflichtfelder. Wir melden uns ausschließlich auf dem angegebenen Weg bei Ihnen zurück.</p></div>
-    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="323725ba-5e4d-4f2c-a6aa-25919e5d3225">
-      <input type="hidden" name="subject" value="Neue Anfrage über ORYX Landingpage">
-      <input type="hidden" name="redirect" value="https://www.etikettenloesungen.com/danke">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<!-- FORMULAR -->
+<section class="section section-alt" id="kontaktformular" style="padding-top:128px;">
+  <div class="container">
+    <div class="contact-classic">
+      <div class="s-head" style="text-align:center; margin-bottom:48px;">
+        <span class="eyebrow"><img src="img/cropped-Fav-Icon-192x192.png" alt="" class="eyebrow-logo">Kontaktformular von ORYX Technologies</span><h1>Ihre Anfrage an uns.</h1>
+        <p>Alle mit <span style="color:var(--red)">*</span> markierten Felder sind Pflichtfelder. Wir melden uns ausschließlich auf dem angegebenen Weg bei Ihnen zurück.</p>
+      </div>
 
-      <div class="form-row">
-        <div class="form-group"><label class="label" for="name">Name<span class="req">*</span></label><input type="text" id="name" name="name" placeholder="Max Mustermann" required autocomplete="name"></div>
-        <div class="form-group"><label class="label" for="firma">Unternehmen</label><input type="text" id="firma" name="firma" placeholder="Mustermann GmbH" autocomplete="organization"></div>
-      </div>
-      <div class="form-row">
-        <div class="form-group"><label class="label" for="email">E-Mail-Adresse<span class="req">*</span></label><input type="email" id="email" name="email" placeholder="m.mustermann@firma.de" required autocomplete="email"></div>
-        <div class="form-group"><label class="label" for="telefon">Telefon<span class="req">*</span></label><input type="tel" id="telefon" name="telefon" placeholder="+49 221 12345678" required autocomplete="tel"></div>
-      </div>
-      <div class="form-group">
-        <label class="label" for="produkt">Produktinteresse</label>
-        <select id="produkt" name="produkt">
-          <option value="" disabled selected>Bitte wählen (optional)</option>
-          <option value="hochtemperaturetiketten">Hochtemperaturetiketten</option>
-          <option value="rfid-etiketten">RFID-Etiketten &amp; RFID-Systeme</option>
-          <option value="chemikalienbestaendige-etiketten">Chemikalienbeständige Etiketten</option>
-          <option value="hochtemperaturfolien">Hochtemperaturfolien (Polyimid)</option>
-          <option value="kabelkennzeichnung">Kabelkennzeichnung</option>
-          <option value="mehrere">Mehrere Produkte / noch unklar</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="label" for="anwendung">Ihr Anwendungsfall &amp; Anforderungen</label>
-        <textarea id="anwendung" name="anwendung" rows="5" placeholder="Beschreiben Sie kurz Ihren Einsatzbereich, die relevanten Bedingungen (Temperatur, Chemikalien, Menge) und was Sie bisher verwendet haben."></textarea>
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" id="datenschutz" name="datenschutz" required>
-        <label class="body" for="datenschutz">Ich habe die <a href="datenschutz" target="_blank" rel="noopener" class="link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.<span class="req">*</span></label>
-      </div>
-      <p class="form-note small">Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
-      <button type="submit" class="btn btn-primary action form-submit">Anfrage absenden <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
-    </form>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="323725ba-5e4d-4f2c-a6aa-25919e5d3225">
+        <input type="hidden" name="subject" value="Neue Anfrage über ORYX Landingpage">
+        <input type="hidden" name="redirect" value="https://www.etikettenloesungen.com/danke">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name<span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Max Mustermann" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="firma">Unternehmen</label>
+            <input type="text" id="firma" name="firma" placeholder="Mustermann GmbH" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-Mail-Adresse<span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="m.mustermann@firma.de" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon<span class="req">*</span></label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+49 221 12345678" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="produkt">Produktinteresse</label>
+          <select id="produkt" name="produkt">
+            <option value="" disabled selected>Bitte wählen (optional)</option>
+            <option value="hochtemperaturetiketten">Hochtemperaturetiketten</option>
+            <option value="rfid-etiketten">RFID-Etiketten &amp; RFID-Systeme</option>
+            <option value="chemikalienbestaendige-etiketten">Chemikalienbeständige Etiketten</option>
+            <option value="hochtemperaturfolien">Hochtemperaturfolien (Polyimid)</option>
+            <option value="kabelkennzeichnung">Kabelkennzeichnung</option>
+            <option value="mehrere">Mehrere Produkte / noch unklar</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="anwendung">Ihr Anwendungsfall &amp; Anforderungen</label>
+          <textarea id="anwendung" name="anwendung" rows="5" placeholder="Beschreiben Sie kurz Ihren Einsatzbereich, die relevanten Bedingungen (Temperatur, Chemikalien, Menge) und was Sie bisher verwendet haben."></textarea>
+        </div>
+
+        <div class="form-group" style="display:flex; align-items:flex-start; gap:12px;">
+          <input type="checkbox" id="datenschutz" name="datenschutz" required style="width:auto; margin-top:3px; flex-shrink:0; accent-color:var(--red);">
+          <label for="datenschutz" style="text-transform:none; letter-spacing:0; font-size:0.95rem; color:var(--dark); font-weight:400;">
+            Ich habe die <a href="datenschutz" target="_blank" rel="noopener" style="color:var(--red); text-decoration:underline;">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.<span style="color:var(--red)">*</span>
+          </label>
+        </div>
+
+        <p class="form-note">Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Anfrage absenden
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
   </div>
-</div></section>
+</section>
 
 <div class="process-strip"><div class="process-inner">
   <div class="process-step"><div class="p-num action">1</div><div class="p-body"><h3 class="title">Anfrage absenden</h3><p class="body">Beschreiben Sie Ihre Anforderungen im Formular.</p></div></div>
