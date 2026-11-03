@@ -40,22 +40,6 @@ document.querySelectorAll('.mobile-toggle').forEach(btn => {
   });
 });
 
-/* ---- 3D card tilt ---- */
-document.querySelectorAll('.pcard[data-tilt]').forEach(card => {
-  const STRENGTH = 4;
-  card.addEventListener('mousemove', e => {
-    const r   = card.getBoundingClientRect();
-    const x   = (e.clientX - r.left) / r.width  - 0.5;
-    const y   = (e.clientY - r.top)  / r.height - 0.5;
-    card.style.transform = `translateY(-5px) rotateX(${-y * STRENGTH}deg) rotateY(${x * STRENGTH}deg)`;
-    card.style.transition = 'box-shadow 0.15s ease, border-color 0.35s ease';
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'transform 0.5s ease, box-shadow 0.35s ease, border-color 0.35s ease';
-  });
-});
-
 /* ---- Form submission ---- */
 const form = document.getElementById('contact-form');
 if (form) {

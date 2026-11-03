@@ -27,7 +27,8 @@
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://www.etikettenloesungen.com/impressum">
   <link rel="icon" href="img/cropped-Fav-Icon-192x192.png">
-  <link rel="stylesheet" href="styles.css?v=44">
+  <link rel="preload" href="fonts/HankenGrotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=45">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -43,29 +44,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <ul class="nav-links">
       <li class="nav-item">
-        <button class="nav-link">Etiketten
-          <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </button>
-        <div class="dropdown">
+        <button class="nav-link menu">Etiketten <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <div class="dropdown menu">
           <a href="hochtemperatur-etiketten">Hochtemperaturetiketten</a>
           <a href="rfid-etiketten">RFID-Etiketten</a>
           <a href="chemikalienbestaendige-etiketten">Chemikalienbeständige Etiketten</a>
           <a href="/#kabelmarkierer">Kabelmarkierer</a>
         </div>
       </li>
-      <li class="nav-item"><a href="hochtemperaturfolien" class="nav-link">Folien</a></li>
-      <li class="nav-item"><a href="druck-service" class="nav-link">Druck-Service</a></li>
-      <li class="nav-item"><a href="kontakt" class="nav-link">Kontakt</a></li>
+      <li class="nav-item"><a href="hochtemperaturfolien" class="nav-link menu">Folien</a></li>
+      <li class="nav-item"><a href="druck-service" class="nav-link menu">Druck-Service</a></li>
+      <li class="nav-item"><a href="kontakt" class="nav-link menu">Kontakt</a></li>
     </ul>
-    <a href="kontakt" class="btn btn-primary nav-cta">Beratungsgespräch vereinbaren</a>
+    <a href="kontakt" class="btn btn-secondary nav-cta action">Beratungsgespräch vereinbaren</a>
     <button class="nav-burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <button class="mobile-toggle nav-link">Etiketten
-    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-  </button>
+  <button class="mobile-toggle nav-link">Etiketten <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></button>
   <div class="nav-mobile-sub">
     <a href="hochtemperatur-etiketten">Hochtemperaturetiketten</a>
     <a href="rfid-etiketten">RFID-Etiketten</a>
@@ -75,10 +72,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="hochtemperaturfolien">Hochtemperaturfolien</a>
   <a href="druck-service">Druck-Service</a>
   <a href="kontakt">Kontakt</a>
-  <a href="kontakt" class="btn btn-primary nav-mobile-cta">Beratungsgespräch vereinbaren</a>
+  <a href="kontakt" class="btn btn-secondary action">Beratungsgespräch vereinbaren</a>
 </div>
 
-<!-- IMPRESSUM -->
 <main class="legal-page">
   <h1>Impressum</h1>
 
@@ -145,19 +141,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </main>
 
-<footer class="footer">
+<footer class="footer body">
   <div class="footer-top">
     <div class="f-brand">
-      <a href="/" class="nav-logo">
-        <img src="img/Logo.png" alt="ORYX Technologies" style="height:30px; background:#fff; padding:6px 10px;">
-      </a>
-      <p>Technisch hochentwickelte Systemlösungen für industrielle Kennzeichnung – kundenspezifisch, zuverlässig, beständig.</p>
-      <div class="f-cert">
-        <img src="img/tv-cert-iso-logo-rand.jpg" alt="TÜV CERT – DIN EN ISO 9001 zertifiziert">
-      </div>
+      <a href="/" class="f-logo"><img src="img/Logo.png" alt="ORYX Technologies"></a>
+      <p>Systemlösungen für industrielle Kennzeichnung: kundenspezifisch, zuverlässig, beständig.</p>
+      <div class="f-cert"><img src="img/tv-cert-iso-logo-rand.jpg" alt="TÜV CERT, DIN EN ISO 9001 zertifiziert"></div>
     </div>
     <div class="f-col">
-      <h5>Produkte</h5>
+      <h2 class="label">Produkte</h2>
       <a href="hochtemperatur-etiketten">Hochtemperaturetiketten</a>
       <a href="rfid-etiketten">RFID-Etiketten</a>
       <a href="chemikalienbestaendige-etiketten">Chemikalienbeständige Etiketten</a>
@@ -165,36 +157,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="druck-service">Druckservice</a>
     </div>
     <div class="f-contact">
-      <h5>Kontakt</h5>
+      <h2 class="label">Kontakt</h2>
       <div class="f-contact-grid">
-        <div class="f-loc">
-          <h6>Standort Deutschland</h6>
-          <p>ORYX Technologies GmbH<br>Wildmoos 2<br>D-82266 Inning am Ammersee</p>
-          <p>Tel.: 0049 (0) 8143 / 99298 – 0<br>Fax: 0049 (0) 8143 / 99298 – 249<br>Mobil: 0173 6389096</p>
-        </div>
-        <div class="f-loc">
-          <h6>Standort Österreich</h6>
-          <p>ORYX Technologies GmbH<br>Ared Str. 7<br>A-2544 Leobersdorf</p>
-          <p>Tel.: 0043 (0) 2256 / 62933 – 0<br>Fax: 0043 (0) 2256 / 62933 – 30</p>
-        </div>
+        <div class="f-loc"><p>Standort Deutschland<br>ORYX Technologies GmbH<br>Wildmoos 2<br>D-82266 Inning am Ammersee</p><p>Tel.: 0049 (0) 8143 / 99298 – 0<br>Mobil: 0173 6389096</p></div>
+        <div class="f-loc"><p>Standort Österreich<br>ORYX Technologies GmbH<br>Ared Str. 7<br>A-2544 Leobersdorf</p><p>Tel.: 0043 (0) 2256 / 62933 – 0</p></div>
       </div>
-      <div class="f-contact-mail">
-        <a href="mailto:info@oryx.net">info@oryx.net</a>
-      </div>
+      <p class="f-mail"><a href="mailto:info@oryx.net">info@oryx.net</a></p>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-bottom small">
     <p>© 2025 ORYX Technologies GmbH. Alle Rechte vorbehalten.</p>
-    <div class="footer-legal">
-      <a href="impressum">Impressum</a>
-      <a href="datenschutz">Datenschutz</a>
-      <a href="agb">AGB</a>
-      <a href="#" data-cc-open>Cookie-Einstellungen</a>
-    </div>
+    <div class="footer-legal"><a href="impressum">Impressum</a><a href="datenschutz">Datenschutz</a><a href="agb">AGB</a><button type="button" data-cc-open>Cookie-Einstellungen</button></div>
   </div>
 </footer>
 
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 <script src="cookie-consent.js?v=2"></script>
 </body>
 </html>
